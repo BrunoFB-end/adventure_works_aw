@@ -1,0 +1,13 @@
+
+sources:
+  - name: erp
+    database: fea25_05
+    schema: raw_adventure_works
+    tables:
+      - name: sales_creditcard
+        columns:
+          - name: creditcardid
+            data_tests:
+             - unique
+             - not_null
+          
