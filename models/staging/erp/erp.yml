@@ -57,4 +57,22 @@ sources:
           - name: businessentityid
             data_tests:
              - unique
-             - not_null                                             
+             - not_null     
+      - name: person_stateprovince
+        columns:
+          - name: stateprovinceid
+            data_tests:
+             - unique
+             - not_null     
+      - name: person_countryregion
+        columns:
+          - name: countryregioncode
+            data_tests:
+             - unique
+             - not_null    
+      - name: person_address
+        columns:
+          - name: addressid
+            data_tests:
+             - unique
+             - not_null                                                                                                                                              
