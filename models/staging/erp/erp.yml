@@ -10,17 +10,33 @@ sources:
             data_tests:
              - unique
              - not_null
-
       - name: sales_salesorderheadersalesreason
         columns:
           - name: salesorderid
             data_tests:
              - unique
              - not_null          
-
       - name: sales_salesreason
         columns:
           - name: salesreasonid
             data_tests:
              - unique
              - not_null       
+      - name: production_product
+        columns:
+          - name: productid
+            data_tests:
+             - unique
+             - not_null              
+      - name: production_productsubcategory
+        columns:
+          - name: productsubcategoryid
+            data_tests:
+             - unique
+             - not_null   
+      - name: production_productcategory
+        columns:
+          - name: productcategoryid
+            data_tests:
+             - unique
+             - not_null             
