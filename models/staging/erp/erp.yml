@@ -40,3 +40,21 @@ sources:
             data_tests:
              - unique
              - not_null             
+      - name: sales_customer
+        columns:
+          - name: customerid
+            data_tests:
+             - unique
+             - not_null  
+      - name: sales_store
+        columns:
+          - name: businessentityid
+            data_tests:
+             - unique
+             - not_null   
+      - name: person_person
+        columns:
+          - name: businessentityid
+            data_tests:
+             - unique
+             - not_null                                             
