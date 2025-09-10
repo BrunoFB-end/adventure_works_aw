@@ -10,4 +10,17 @@ sources:
             data_tests:
              - unique
              - not_null
-          
+
+      - name: sales_salesorderheadersalesreason
+        columns:
+          - name: salesorderid
+            data_tests:
+             - unique
+             - not_null          
+
+      - name: sales_salesreason
+        columns:
+          - name: salesreasonid
+            data_tests:
+             - unique
+             - not_null       
