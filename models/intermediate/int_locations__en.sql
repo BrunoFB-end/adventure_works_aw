@@ -14,16 +14,18 @@ with
     )
     , joined as (
         select
-            state_provinces.stateprovinceid_pk
+              addresses.address_id
+            , addresses.address_city
+            , state_provinces.stateprovince_id
+            , state_provinces.territory_id
             , state_provinces.countryregion_code
             , state_provinces.stateprovince_code
             , coutryregions.countryregion_name
             , state_provinces.state_name
-            , addresses.address_id
-            , addresses.address_city
+           
         from state_provinces
         inner join coutryregions on state_provinces.countryregion_code = coutryregions.coutryregion_id
-        inner join addresses on state_provinces.stateprovinceid_pk = addresses.state_province_id
+        inner join addresses on state_provinces.stateprovince_id = addresses.state_province_id
     )
 select *
 from joined

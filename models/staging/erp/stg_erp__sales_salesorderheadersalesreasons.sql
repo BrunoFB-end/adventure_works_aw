@@ -9,7 +9,8 @@ source as (
 renamed as (
 
     select
-        cast(salesorderid as int) as salesorder_pk
+        salesorderid::varchar || '-' || salesreasonid::varchar as sk_salesreasons
+        , cast(salesorderid as int) as salesorder_id
         , cast(salesreasonid as int) as salesreason_id
 
     from source

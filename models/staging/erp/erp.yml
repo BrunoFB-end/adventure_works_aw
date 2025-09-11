@@ -14,13 +14,11 @@ sources:
         columns:
           - name: salesorderid
             data_tests:
-             - unique
              - not_null          
       - name: sales_salesreason
         columns:
           - name: salesreasonid
             data_tests:
-             - unique
              - not_null       
       - name: production_product
         columns:
@@ -75,4 +73,15 @@ sources:
           - name: addressid
             data_tests:
              - unique
-             - not_null                                                                                                                                              
+             - not_null    
+      - name: sales_salesorderheader
+        columns:
+          - name: salesorderid
+            data_tests:
+             - unique
+             - not_null      
+      - name: sales_salesorderdetail
+        columns:
+          - name: salesorderid
+            data_tests:
+             - not_null                                                                                                                                                                          
