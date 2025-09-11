@@ -5,4 +5,4 @@ with
    )
 
 select *
-from int_sales__creditcards
+from int_sales_creditcards
