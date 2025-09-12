@@ -1,0 +1,31 @@
+models:
+  - name: dim_products
+    description: >
+      Dimension table that contains detailed information about products. 
+      Each record includes product identifiers, names, numbers, and their 
+      hierarchical categorization into subcategories and categories. 
+      This table can be used for product-level and category-level analysis.
+    columns:
+      - name: productid_pk
+        description: Unique identifier for each product.
+        tests:
+          - unique
+          - not_null
+
+      - name: product_name
+        description: Full name of the product.
+
+      - name: product_number
+        description: Internal number or code assigned to the product.
+
+      - name: product_category_id
+        description: Identifier for the product’s main category.
+
+      - name: category_name
+        description: Name of the product’s main category.
+
+      - name: product_subcategory_id
+        description: Identifier for the product’s subcategory.
+
+      - name: subcategory_name
+        description: Name of the product’s subcategory.

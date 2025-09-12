@@ -1,0 +1,25 @@
+models:
+  - name: dim_salesreasons
+    description: >
+      Dimension table that contains information about reasons for sales. 
+      Each record represents a link between a sales order and one or more 
+      reasons, such as manufacturer, quality, or other classifications. 
+      This table is useful for analyzing the motivations and justifications 
+      behind sales activities.
+    columns:
+      - name: sk_salesreasons
+        description: Surrogate key combining sales order and sales reason.
+        tests:
+          - unique
+
+      - name: salesorder_id
+        description: Identifier of the sales order associated with the reason.
+
+      - name: salesreason_id
+        description: Identifier of the sales reason.
+
+      - name: salesreason_name
+        description: Name of the sales reason (e.g., Manufacturer, Quality).
+
+      - name: reason_type
+        description: Type or classification of the sales reason.
