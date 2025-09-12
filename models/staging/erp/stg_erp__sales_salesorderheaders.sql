@@ -27,7 +27,7 @@ renamed as (
         , cast(creditcardid as int) as creditcard_id
         -- creditcardapprovalcode,
         -- currencyrateid,
-        , cast(subtotal as int) as order_subtotal
+        , cast(subtotal as numeric(18,4)) as order_subtotal
         -- taxamt,
         -- freight,
         -- totaldue,

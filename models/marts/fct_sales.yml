@@ -1,0 +1,52 @@
+models:
+  - name: fct_sales
+    description: >
+      Fact table that contains detailed sales transactions. 
+      Each record represents a sales order line item, including product, 
+      customer, payment, shipping, and financial details. 
+      This table serves as the central point for sales analysis and 
+      can be joined with multiple dimensions for reporting.
+    columns:
+      - name: sk_orderdetail
+        description: Surrogate key that uniquely identifies each sales order line.
+        tests:
+          - unique
+
+      - name: salesorder_id
+        description: Identifier of the sales order to which the detail belongs.
+
+      - name: salesorderdetail_id
+        description: Identifier of the specific order detail line.
+
+      - name: product_id
+        description: Foreign key referencing the product being sold.
+
+      - name: customer_id
+        description: Foreign key referencing the customer who placed the order.
+
+      - name: shiptoaddress_id
+        description: Foreign key referencing the shipping address for the order.
+
+      - name: creditcard_id
+        description: Foreign key referencing the credit card used for payment.
+
+      - name: territory_id
+        description: Foreign key referencing the sales territory of the order.
+
+      - name: order_qty
+        description: Quantity of the product ordered.
+
+      - name: unit_price
+        description: Price per unit of the product at the time of the order.
+
+      - name: unitprice_discount
+        description: Discount applied to the unit price of the product.
+
+      - name: order_date
+        description: Date when the sales order was placed.
+
+      - name: order_status
+        description: Status of the sales order (e.g., pending, shipped, completed).
+
+      - name: order_subtotal
+        description: Subtotal amount of the order before taxes and shipping costs.

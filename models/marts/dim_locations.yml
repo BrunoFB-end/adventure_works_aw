@@ -1,0 +1,34 @@
+models:
+  - name: dim_locations
+    description: >
+      Dimension table that contains geographical and administrative information 
+      related to addresses. Each record provides details on the city, state, 
+      country/region, and sales territory, which can be used for regional and 
+      demographic analysis.
+    columns:
+      - name: address_id
+        description: Unique identifier for each address.
+        tests:
+          - unique
+          - not_null
+
+      - name: address_city
+        description: City where the address is located.
+
+      - name: countryregion_code
+        description: Code representing the country or region of the address.
+
+      - name: countryregion_name
+        description: Full name of the country or region of the address.
+
+      - name: stateprovince_code
+        description: Code representing the state or province of the address.
+
+      - name: stateprovince_id
+        description: Unique identifier for each state or province.
+
+      - name: state_name
+        description: Full name of the state or province.
+
+      - name: territory_id
+        description: Identifier linking the address to a sales territory.

@@ -1,0 +1,16 @@
+models:
+  - name: dim_creditcards
+    description: >
+      Dimension table that contains information about credit cards issued by the company. 
+      Each record represents a unique credit card, including its type classification 
+      (e.g., SuperiorCard, Distinguish, ColonialVoice, Vista).
+    columns:
+      - name: creditcard_pk
+        description: Unique identifier for each credit card.
+        tests:
+          - unique
+          - not_null
+
+      - name: card_type
+        description: >
+          Type of the credit card (e.g., SuperiorCard, Distinguish, ColonialVoice, Vista).

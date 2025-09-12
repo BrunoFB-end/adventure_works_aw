@@ -16,8 +16,8 @@ renamed as (
         , cast(orderqty as int) as order_qty
         , cast(productid as int) as product_id
         -- specialofferid,
-        , cast(unitprice as int) as unit_price
-        , cast(unitpricediscount as int) as unitprice_discount
+        , cast(unitprice as numeric(18,4)) as unit_price
+        , cast(unitpricediscount as numeric(18,4)) as unitprice_discount
         -- rowguid,
         -- modifieddate
 

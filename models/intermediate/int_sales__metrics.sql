@@ -25,7 +25,7 @@ with
             , order_headers.order_status
             , order_headers.order_subtotal  
         from order_details
-        inner join order_headers on order_details.salesorder_id = order_headers.salesorder_id
+        left join order_headers on order_details.salesorder_id = order_headers.salesorder_id
     )
 select *
 from joined
